@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "e573ba92-127b-494f-8e1a-6e592314c6d1",
+		"name": "externalService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20099085"
+	},
+	"item": [
+		{
+			"name": "localhost:4444/api/customer/getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\":\"Google\",\r\n    \"customerName\":\"Gson\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4444/api/customer/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"getAll"
+					]
+				},
+				"description": "Username:32Bit\r\nPassword:32Bit"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4444/api/customer/delete/{id}",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/delete/18",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"delete",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4444/api/customer/add",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\":\"Siemens\",\r\n    \"customerName\":\"Emre\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4444/api/customer/add",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4444/api/customer/getById/{id}",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/getById/1",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"getById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4444/api/customer/getAllByPage/{pageNo}/{pageSize}",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/getAllByPage/2/5",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"getAllByPage",
+						"2",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4444/api/customer/{companyName}-findAllFilteredByCompanyName",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/32Bit",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"32Bit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4444/api/customer/getAllSortedDesc",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/getAllSortedDesc",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"getAllSortedDesc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
