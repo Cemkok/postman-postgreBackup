@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "19419b56-9849-49f1-8d8c-7c110d35417d",
+		"name": "External Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20099085"
+	},
+	"item": [
+		{
+			"name": "added customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/add",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleted customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/deleteById/7",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"deleteById",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "found by customer id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/getById/2",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"getById",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filtered by company name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/32Bit",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"32Bit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers are listed by sorting .",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/api/customer/getAllSortedByCustomerName ",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"api",
+						"customer",
+						"getAllSortedByCustomerName "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers are listed by paginating",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

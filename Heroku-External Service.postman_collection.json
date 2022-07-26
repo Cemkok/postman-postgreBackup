@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "d0e7c846-7a76-43c2-a346-e7cb5d418e5f",
+		"name": "Heroku-External Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20099085"
+	},
+	"item": [
+		{
+			"name": "added customer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"cem\",\r\n    \"companyName\":\"Microsoft\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bit32-microservice-1-external.herokuapp.com/api/customer/add",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-1-external",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"customer",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleted by customer id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJ0ZXN0NyIsInVzZXJJZCI6Niwicm9sZXMiOiJVU0VSIiwiZXhwIjoxNjU3OTU0MDA5fQ.OR_E-KM6Bzr8gCibeY0AVltV6FqYSWKb4h_CzLV53n-i6jVl3R9cdjfoMkgSdKcSkJENZ2x0EW5oAvDFtV27rtpdxSCRGNzbeP0py51a_lqpwAyIU9w-ZZ3ttjAz8q1iSRvkTYXJRVp5s5AROR5EHQUB4dmYFl9uCqavboSmuPR_QCt_ifX1GbIo3AyFS-9EZWdNls_ALfTLc01hpAmJiPzaB9at6gqFnXLvc42gWWyEQQ75q90ITq_hksyWN6SPpf1zd8avj8_2gw1woCdI56UELaRpyWYWSasgctOxxPIYqR9rMfaxRi4WAMFR4XKi8HJVpWGXLpNORUPg5SWg-g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\":\"Mercedes\",\r\n    \"customerName\":\"Cem\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bit32-microservice-1-external.herokuapp.com/api/customer/deleteById/7",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-1-external",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"customer",
+						"deleteById",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "found by customer id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bit32-microservice-1-external.herokuapp.com/api/customer/getById/2",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-1-external",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"customer",
+						"getById",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "found by company name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bit32-microservice-1-external.herokuapp.com/api/customer/Oracle",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-1-external",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"customer",
+						"Oracle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers are listed by sorting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bit32-microservice-1-external.herokuapp.com/api/customer/getAllSortedByCustomerName",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-1-external",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"customer",
+						"getAllSortedByCustomerName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers are listed by paginating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bit32-microservice-1-external.herokuapp.com/api/customer/getAllByPage/1/4",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-1-external",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"customer",
+						"getAllByPage",
+						"1",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

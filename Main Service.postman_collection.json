@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "96eb9eb1-f261-4048-811f-7b29f71c5ead",
+		"name": "Main Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20099085"
+	},
+	"item": [
+		{
+			"name": "sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test4\",\r\n    \"password\":\"test4\",\r\n    \"name\":\"cem\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5555/api/authentication/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"api",
+						"authentication",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign-in",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "32Bit",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "32Bit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test4\",\r\n    \"password\":\"test4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5555/api/authentication/sign-in",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"api",
+						"authentication",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJ0ZXN0NCIsInVzZXJJZCI6NCwicm9sZXMiOiJVU0VSIiwiZXhwIjoxNjU4ODIzNTQ0fQ.i75KmY0z2P3M_EEHaGgYCArtDgXye0KCnZNiqDLBFLUEjU5ZeSNYEZcAHii7NEwdxnoFLhEEVKAvjto-SDUH5n0CVeA3roRw8gH6pjJ-UfW-ZJ5IGr8Jf5Q9imyOiE5NC2TdAy-uLEKc_5TkFgAtTP4k7BBTZpLnXleYR0AGB_NMVt6b8HjO36G7Jnt7AKupeeVxV5iQT06AIkCZE_ZRcEq-1w65kb2zoh1KBAOBgjZkRViSFOisTVcnzwXOHq2s3wxCmPmvXc4P_rYnMd9KxbL76Tmz2UXF9PzDZilEkHeDbVe-YVtvHVAECs6H5IS2zNBYp0H5gH8IQl3-L2HPfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"Cem\",\r\n    \"companyName\":\"THY\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5555/gateway/customer/add",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"gateway",
+						"customer",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detele customer by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJ0ZXN0NCIsInVzZXJJZCI6NCwicm9sZXMiOiJVU0VSIiwiZXhwIjoxNjU4ODIzNTQ0fQ.i75KmY0z2P3M_EEHaGgYCArtDgXye0KCnZNiqDLBFLUEjU5ZeSNYEZcAHii7NEwdxnoFLhEEVKAvjto-SDUH5n0CVeA3roRw8gH6pjJ-UfW-ZJ5IGr8Jf5Q9imyOiE5NC2TdAy-uLEKc_5TkFgAtTP4k7BBTZpLnXleYR0AGB_NMVt6b8HjO36G7Jnt7AKupeeVxV5iQT06AIkCZE_ZRcEq-1w65kb2zoh1KBAOBgjZkRViSFOisTVcnzwXOHq2s3wxCmPmvXc4P_rYnMd9KxbL76Tmz2UXF9PzDZilEkHeDbVe-YVtvHVAECs6H5IS2zNBYp0H5gH8IQl3-L2HPfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5555/gateway/customer/deleteCustomerById/10",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"gateway",
+						"customer",
+						"deleteCustomerById",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all by pagination",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJ0ZXN0NCIsInVzZXJJZCI6NCwicm9sZXMiOiJVU0VSIiwiZXhwIjoxNjU4ODIzNTQ0fQ.i75KmY0z2P3M_EEHaGgYCArtDgXye0KCnZNiqDLBFLUEjU5ZeSNYEZcAHii7NEwdxnoFLhEEVKAvjto-SDUH5n0CVeA3roRw8gH6pjJ-UfW-ZJ5IGr8Jf5Q9imyOiE5NC2TdAy-uLEKc_5TkFgAtTP4k7BBTZpLnXleYR0AGB_NMVt6b8HjO36G7Jnt7AKupeeVxV5iQT06AIkCZE_ZRcEq-1w65kb2zoh1KBAOBgjZkRViSFOisTVcnzwXOHq2s3wxCmPmvXc4P_rYnMd9KxbL76Tmz2UXF9PzDZilEkHeDbVe-YVtvHVAECs6H5IS2zNBYp0H5gH8IQl3-L2HPfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5555/gateway/customer/getAll/1/5",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"gateway",
+						"customer",
+						"getAll",
+						"1",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get customer by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJ0ZXN0NCIsInVzZXJJZCI6NCwicm9sZXMiOiJVU0VSIiwiZXhwIjoxNjU4ODIzNTQ0fQ.i75KmY0z2P3M_EEHaGgYCArtDgXye0KCnZNiqDLBFLUEjU5ZeSNYEZcAHii7NEwdxnoFLhEEVKAvjto-SDUH5n0CVeA3roRw8gH6pjJ-UfW-ZJ5IGr8Jf5Q9imyOiE5NC2TdAy-uLEKc_5TkFgAtTP4k7BBTZpLnXleYR0AGB_NMVt6b8HjO36G7Jnt7AKupeeVxV5iQT06AIkCZE_ZRcEq-1w65kb2zoh1KBAOBgjZkRViSFOisTVcnzwXOHq2s3wxCmPmvXc4P_rYnMd9KxbL76Tmz2UXF9PzDZilEkHeDbVe-YVtvHVAECs6H5IS2zNBYp0H5gH8IQl3-L2HPfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5555/gateway/customer/getByCustomerId/5",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"gateway",
+						"customer",
+						"getByCustomerId",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by company name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJ0ZXN0NCIsInVzZXJJZCI6NCwicm9sZXMiOiJVU0VSIiwiZXhwIjoxNjU4ODIzNTQ0fQ.i75KmY0z2P3M_EEHaGgYCArtDgXye0KCnZNiqDLBFLUEjU5ZeSNYEZcAHii7NEwdxnoFLhEEVKAvjto-SDUH5n0CVeA3roRw8gH6pjJ-UfW-ZJ5IGr8Jf5Q9imyOiE5NC2TdAy-uLEKc_5TkFgAtTP4k7BBTZpLnXleYR0AGB_NMVt6b8HjO36G7Jnt7AKupeeVxV5iQT06AIkCZE_ZRcEq-1w65kb2zoh1KBAOBgjZkRViSFOisTVcnzwXOHq2s3wxCmPmvXc4P_rYnMd9KxbL76Tmz2UXF9PzDZilEkHeDbVe-YVtvHVAECs6H5IS2zNBYp0H5gH8IQl3-L2HPfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5555/gateway/customer/THY",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"gateway",
+						"customer",
+						"THY"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sort by company name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJ0ZXN0NCIsInVzZXJJZCI6NCwicm9sZXMiOiJVU0VSIiwiZXhwIjoxNjU4ODIzNTQ0fQ.i75KmY0z2P3M_EEHaGgYCArtDgXye0KCnZNiqDLBFLUEjU5ZeSNYEZcAHii7NEwdxnoFLhEEVKAvjto-SDUH5n0CVeA3roRw8gH6pjJ-UfW-ZJ5IGr8Jf5Q9imyOiE5NC2TdAy-uLEKc_5TkFgAtTP4k7BBTZpLnXleYR0AGB_NMVt6b8HjO36G7Jnt7AKupeeVxV5iQT06AIkCZE_ZRcEq-1w65kb2zoh1KBAOBgjZkRViSFOisTVcnzwXOHq2s3wxCmPmvXc4P_rYnMd9KxbL76Tmz2UXF9PzDZilEkHeDbVe-YVtvHVAECs6H5IS2zNBYp0H5gH8IQl3-L2HPfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5555/gateway/customer/getAllSortedByCompanyName",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"gateway",
+						"customer",
+						"getAllSortedByCompanyName"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
