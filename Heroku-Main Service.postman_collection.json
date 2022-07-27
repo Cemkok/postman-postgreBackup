@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "44a88f3e-30e1-4c8e-811a-b941955f2ff3",
+		"name": "Heroku-Main Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20099085"
+	},
+	"item": [
+		{
+			"name": "cloud-sign-up",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJ0ZXN0MiIsInVzZXJJZCI6MSwicm9sZXMiOiJVU0VSIiwiZXhwIjoxNjU5MDE2OTk2fQ.vKdauVeztHsyK3kQmkp4KuvK6fKq9eQjQ0eK1ffmUvB-NNZCAJdR5VBwmTh3kezbCNHJpqcNPA3y91Kiez_gOu6EsAIpTFHmYHkSZXvmI8paMT0Z-w6-ohArOtMrsIDrC2GLAto7cNcP-itZ6LjuUI4bHrP7_XejKOO4NYBRyW_KedZofogPaXYPKxbhPojGtHGxV7dMDbkU_MbNZ7h67wZjEkqG2debgxb7bRpZw4CvgEiuOV4OtnRcjAIU6ASXLlV1EeX3SKUShl5-qbEDGCAyvYNvzheK3jMI9HtP24rxkZGsFOOBEZTdC-iUbqh2T1K9kWeCehGJ2_zEyAxASA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Cem\",\r\n    \"password\":\"32Bit\",\r\n    \"name\":\"Cem\"   \r\n   \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bit32-microservice-2-main.herokuapp.com/api/authentication/sign-up",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-2-main",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"authentication",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cloud-sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Cem\",\r\n    \"password\":\"32Bit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bit32-microservice-2-main.herokuapp.com/api/authentication/sign-in",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-2-main",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"authentication",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cloud-add-customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJDZW0iLCJ1c2VySWQiOjIsInJvbGVzIjoiVVNFUiIsImV4cCI6MTY1OTAzMjM1OH0.f7VvjV_bIVaHrDeiz-dFNHCmY8PDI5kn4K7OpqwJuhn3n87qCjccQmrmBs1EbeQeEt8NeHtvEmFP5gX8e-5yf0enO1BOGPnyXQbjjQ4u0sEfgFQ6QdckXJHgSE8dOIRcTQQYzTxWCWaqK9XCxhgCwqinEzcD26ZsqVqF32WbElBNnCdPW_zVpVvAwGGuJMeEOhBaYtgpwb4_V2WQpZtUg-_94A2YXtq191euMMGbD7W09rQVv0cQ5hJ83vel5xHYx0NllHa2I3vKYcmESy7qTeY2EY5fUTKHESlNOw0E0Wt4EkhfOLKj9J-2vJDm_-iEeqwxW8Z-7B2R-I8hS34Y4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"32Bit\",\r\n    \"companyName\":\"Tübitak MAM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bit32-microservice-2-main.herokuapp.com/gateway/customer/add ",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-2-main",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"gateway",
+						"customer",
+						"add "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cloud-pageable customer list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJDZW0iLCJ1c2VySWQiOjIsInJvbGVzIjoiVVNFUiIsImV4cCI6MTY1OTAzMjM1OH0.f7VvjV_bIVaHrDeiz-dFNHCmY8PDI5kn4K7OpqwJuhn3n87qCjccQmrmBs1EbeQeEt8NeHtvEmFP5gX8e-5yf0enO1BOGPnyXQbjjQ4u0sEfgFQ6QdckXJHgSE8dOIRcTQQYzTxWCWaqK9XCxhgCwqinEzcD26ZsqVqF32WbElBNnCdPW_zVpVvAwGGuJMeEOhBaYtgpwb4_V2WQpZtUg-_94A2YXtq191euMMGbD7W09rQVv0cQ5hJ83vel5xHYx0NllHa2I3vKYcmESy7qTeY2EY5fUTKHESlNOw0E0Wt4EkhfOLKj9J-2vJDm_-iEeqwxW8Z-7B2R-I8hS34Y4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bit32-microservice-2-main.herokuapp.com/gateway/customer/getAll/1/10 ",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-2-main",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"gateway",
+						"customer",
+						"getAll",
+						"1",
+						"10 "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cloud - delete by customer id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJDZW0iLCJ1c2VySWQiOjIsInJvbGVzIjoiVVNFUiIsImV4cCI6MTY1OTAzMjM1OH0.f7VvjV_bIVaHrDeiz-dFNHCmY8PDI5kn4K7OpqwJuhn3n87qCjccQmrmBs1EbeQeEt8NeHtvEmFP5gX8e-5yf0enO1BOGPnyXQbjjQ4u0sEfgFQ6QdckXJHgSE8dOIRcTQQYzTxWCWaqK9XCxhgCwqinEzcD26ZsqVqF32WbElBNnCdPW_zVpVvAwGGuJMeEOhBaYtgpwb4_V2WQpZtUg-_94A2YXtq191euMMGbD7W09rQVv0cQ5hJ83vel5xHYx0NllHa2I3vKYcmESy7qTeY2EY5fUTKHESlNOw0E0Wt4EkhfOLKj9J-2vJDm_-iEeqwxW8Z-7B2R-I8hS34Y4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://bit32-microservice-2-main.herokuapp.com/gateway/customer/deleteCustomerById/11",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-2-main",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"gateway",
+						"customer",
+						"deleteCustomerById",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cloud- get by customer id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJDZW0iLCJ1c2VySWQiOjIsInJvbGVzIjoiVVNFUiIsImV4cCI6MTY1OTAzMjM1OH0.f7VvjV_bIVaHrDeiz-dFNHCmY8PDI5kn4K7OpqwJuhn3n87qCjccQmrmBs1EbeQeEt8NeHtvEmFP5gX8e-5yf0enO1BOGPnyXQbjjQ4u0sEfgFQ6QdckXJHgSE8dOIRcTQQYzTxWCWaqK9XCxhgCwqinEzcD26ZsqVqF32WbElBNnCdPW_zVpVvAwGGuJMeEOhBaYtgpwb4_V2WQpZtUg-_94A2YXtq191euMMGbD7W09rQVv0cQ5hJ83vel5xHYx0NllHa2I3vKYcmESy7qTeY2EY5fUTKHESlNOw0E0Wt4EkhfOLKj9J-2vJDm_-iEeqwxW8Z-7B2R-I8hS34Y4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bit32-microservice-2-main.herokuapp.com/gateway/customer/getByCustomerId/10",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-2-main",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"gateway",
+						"customer",
+						"getByCustomerId",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cloud - filter by company name",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "cloud - sort by company name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJDZW0iLCJ1c2VySWQiOjIsInJvbGVzIjoiVVNFUiIsImV4cCI6MTY1OTAzMjM1OH0.f7VvjV_bIVaHrDeiz-dFNHCmY8PDI5kn4K7OpqwJuhn3n87qCjccQmrmBs1EbeQeEt8NeHtvEmFP5gX8e-5yf0enO1BOGPnyXQbjjQ4u0sEfgFQ6QdckXJHgSE8dOIRcTQQYzTxWCWaqK9XCxhgCwqinEzcD26ZsqVqF32WbElBNnCdPW_zVpVvAwGGuJMeEOhBaYtgpwb4_V2WQpZtUg-_94A2YXtq191euMMGbD7W09rQVv0cQ5hJ83vel5xHYx0NllHa2I3vKYcmESy7qTeY2EY5fUTKHESlNOw0E0Wt4EkhfOLKj9J-2vJDm_-iEeqwxW8Z-7B2R-I8hS34Y4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bit32-microservice-2-main.herokuapp.com/gateway/customer/getAllSortedByCompanyName",
+					"protocol": "https",
+					"host": [
+						"bit32-microservice-2-main",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"gateway",
+						"customer",
+						"getAllSortedByCompanyName"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
